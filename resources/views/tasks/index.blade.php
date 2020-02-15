@@ -8,12 +8,14 @@
         <table class="table table-striped">
             <thead>
                 <th>id</th>
+                <th>進捗</th>
                 <th>タスク</th>
             </thead>
             <tbody>
                 @foreach ($tasks as $task)
                 <tr>
                     <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
+                    <td>{{ $task->status }}</td>
                     <td>{{ $task->content }}</td>
                 </tr>
                 @endforeach
