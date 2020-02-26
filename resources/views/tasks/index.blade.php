@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <h3>{{ $user->name }}さんこんにちは</h3>
     <h1>タスク一覧</h1>
     
     @if (count($tasks) > 0)
